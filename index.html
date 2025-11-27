@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fafafa;
+            color: #222;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 15px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #222;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #0070f3;
+        }
+
+        section {
+            padding: 120px 20px;
+            min-height: 100vh;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .skills-list li,
+        .social-links a,
+        .hero button,
+        .card,
+        nav a {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        
+
+        .hero {
+            text-align: center;
+            padding-top: 160px;
+            background: linear-gradient(to bottom right, #ffffff, #e8f0ff);
+            border-radius: 10px;
+            padding-bottom: 100px;
+            margin-top: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .hero button {
+            margin-top: 20px;
+            background: #0070f3;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .hero button:hover {
+            background: #005fcc;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin: 15px 0;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .social-links a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0070f3;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .social-links a:hover {
+            color: #005fcc;
+            text-decoration: underline;
+        }
+
+        .skills-list li {
+            margin: 8px 0;
+            padding: 10px 16px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            display: inline-block;
+            margin-right: 10px;
+            transition: 0.25s ease;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .skills-list li.html:hover {
+            background: #ff4d4d;
+            color: white;
+        }
+
+        .skills-list li.css:hover {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .skills-list li.js:hover {
+            background: #facc15;
+            color: #222;
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.25s ease;
+            padding: 8px 14px;
+            border-radius: 6px;
+        }
+
+        .social-links a.git:hover {
+            background: #333;
+            color: white;
+        }
+
+        .social-links a.ig:hover {
+            background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+            color: white;
+        }
+
+        .social-links a.link:hover {
+            background: #0a66c2;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a onclick="showSection('home')">Home</a></li>
+            <li><a onclick="showSection('about')">About</a></li>
+            <li><a onclick="showSection('contact')">Contact</a></li>
+            <li><a onclick="showSection('projects')">Projects</a></li>
+            <li><a onclick="showSection('skills')">Skills</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Front-End Developer • Web Enthusiast</p>
+        <button onclick="changeText()">Click Me</button>
+        <p id="dynamic-text"></p>
+    </section>
+
+    <section id="about" style="display:none;">
+        <h2>About Me</h2>
+        <p>Saya seorang siswa yang sedang belajar web development dasar dan ingin membuat portfolio pertama saya.</p>
+    </section>
+
+    <section id="contact" style="display:none;">
+        <h2>Contact</h2>
+        <div class="social-links">
+            <a class="git" href="https://github.com/rvldrh">Github</a>
+            <a class="ig" href="https://www.instagram.com/rvldrh/">Instagram</a>
+            <a class="link" href="https://www.linkedin.com/in/rivaldo-rizky-09982024a/">Linkedin</a>
+        </div>
+    </section>
+
+    <section id="projects" style="display:none;">
+        <h2>Projects</h2>
+        <div class="card">Project 1 — Portfolio <a href="https://www.rvldrh.my.id/">(link)</a></div>
+    </section>
+
+    <section id="skills" style="display:none;">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li class="html">HTML</li>
+            <li class="css">CSS</li>
+            <li class="js">JavaScript</li>
+        </ul>
+    </section>
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('section').forEach(sec => sec.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+            window.scrollTo(0, 0);
+        }
+
+        function changeText() {
+            document.getElementById('dynamic-text').innerText = "Thanks for clicking!";
+        }
+    </script>
+
+</body>
+
+</html>
