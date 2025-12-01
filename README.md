@@ -34,11 +34,13 @@ All pages are connected through a navigation bar and displayed using basic JavaS
 ---
 
 ## 📁 Project Structure
+```bash
 /
-├── index.html
-├── style.css (optional future separation)
-├── script.js (optional future separation)
-└── /assets (optional — images/icons if added later)
+├── 📄 index.html
+├── 🎨 style.css
+├── ⚙️ script.js
+└── 📂 assets/
+```
 
 
 > Currently, CSS and JS are embedded in the HTML file for simplicity.  
