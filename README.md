@@ -31,17 +31,6 @@ All pages are connected through a navigation bar and displayed using basic JavaS
 - Clean modern UI with hover effects and transitions
 - Sections structured to support future expansion
 
----
-
-## 📁 Project Structure
-```bash
-/
-├── 📄 index.html
-├── 🎨 style.css
-├── ⚙️ script.js
-└── 📂 assets/
-```
-
 
 > Currently, CSS and JS are embedded in the HTML file for simplicity.  
 Future scalability suggests separating files.
