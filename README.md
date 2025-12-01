@@ -38,8 +38,8 @@ Future scalability suggests separating files.
 ---
 
 ## 🚀 Live Demo & Repository
-🔗 Live Website: *(insert deployment link once uploaded)*  
-📌 GitHub Repository: *(insert repo link)*
+🔗 Live Website: https://gdgoc-task1.netlify.app/  
+📌 GitHub Repository: https://github.com/rvldrh/gdgoc.git
 
 ---
 
